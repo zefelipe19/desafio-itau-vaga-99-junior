@@ -12,7 +12,7 @@ public class TransacaoModel {
 
     public TransacaoModel(Float valor, String dataHora) {
         this.valor = valor;
-        this.dataHora = ZonedDateTime.parse("2020-08-07T12:34:56.789-03:00");
+        this.dataHora = ZonedDateTime.parse(dataHora);
     }
 
     public Float getValor() {
