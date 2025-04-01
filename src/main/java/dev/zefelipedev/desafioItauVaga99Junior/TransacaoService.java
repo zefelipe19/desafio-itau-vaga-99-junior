@@ -24,6 +24,10 @@ public class TransacaoService {
         return transacao;
     }
 
+    public void clearTransacao() {
+        this.transacoes.clear();
+    }
+
     public ArrayList<TransacaoModel> getAllTransacoes() {
         return this.transacoes;
     }

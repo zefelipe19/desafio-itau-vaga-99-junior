@@ -32,4 +32,10 @@ public class TransacaoController {
         this.transacaoService.createTransacao(transacao);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/transacao")
+    public ResponseEntity<Void> limparTransacao() {
+        this.transacaoService.clearTransacao();
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
