@@ -1,4 +1,4 @@
-package dev.zefelipedev.desafioItauVaga99Junior;
+package dev.zefelipedev.desafioItauVaga99Junior.Models;
 
 
 import java.time.ZonedDateTime;

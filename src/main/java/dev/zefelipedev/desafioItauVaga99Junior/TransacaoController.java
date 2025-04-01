@@ -1,10 +1,11 @@
 package dev.zefelipedev.desafioItauVaga99Junior;
 
+import dev.zefelipedev.desafioItauVaga99Junior.Models.TransacaoModel;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -18,8 +19,17 @@ public class TransacaoController {
         return "<h1>Bem Vindos, Examinadores do Itaú!</h1><h4>Esse é o meu projeto do desafio itaú</h4>";
     }
 
+    @GetMapping("/transacoes")
+    public ArrayList<TransacaoModel> getAllTransacoes() {
+        return this.transacaoService.getAllTransacoes();
+    }
+
     @PostMapping("/transacao")
-    public TransacaoModel createTransacao(@RequestBody TransacaoModel transacao) {
-        return this.transacaoService.createTransacao(transacao);
+    public ResponseEntity<Void> createTransacao(@Valid @RequestBody TransacaoModel transacao) {
+        if(transacao.getValor() == null | transacao.getDataHora() == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        this.transacaoService.createTransacao(transacao);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }
