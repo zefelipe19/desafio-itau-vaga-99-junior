@@ -1,9 +1,9 @@
-package dev.zefelipedev.desafioItauVaga99Junior;
+package dev.zefelipedev.desafioItauVaga99Junior.Services;
 
 
 import dev.zefelipedev.desafioItauVaga99Junior.Models.TransacaoModel;
-import dev.zefelipedev.desafioItauVaga99Junior.TransacaoExceptions.TransacaoMenorQueZeroException;
-import dev.zefelipedev.desafioItauVaga99Junior.TransacaoExceptions.TransacaoNoFuturoException;
+import dev.zefelipedev.desafioItauVaga99Junior.Exceptions.TransacaoMenorQueZeroException;
+import dev.zefelipedev.desafioItauVaga99Junior.Exceptions.TransacaoNoFuturoException;
 import org.springframework.stereotype.Service;
 
 import java.time.ZonedDateTime;

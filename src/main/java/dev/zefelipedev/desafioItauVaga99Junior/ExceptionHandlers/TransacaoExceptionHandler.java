@@ -1,7 +1,7 @@
-package dev.zefelipedev.desafioItauVaga99Junior.TransacaoExceptionHandler;
+package dev.zefelipedev.desafioItauVaga99Junior.ExceptionHandlers;
 
-import dev.zefelipedev.desafioItauVaga99Junior.TransacaoExceptions.TransacaoMenorQueZeroException;
-import dev.zefelipedev.desafioItauVaga99Junior.TransacaoExceptions.TransacaoNoFuturoException;
+import dev.zefelipedev.desafioItauVaga99Junior.Exceptions.TransacaoMenorQueZeroException;
+import dev.zefelipedev.desafioItauVaga99Junior.Exceptions.TransacaoNoFuturoException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
